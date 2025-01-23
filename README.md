@@ -17,7 +17,7 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 ## Project Setup 
 在终端中下载相应依赖，建议看package.json下的dependences，并执行相应下载指令：
 ```sh
-npm install
+npm install axios (example)
 ```
 
 ### Compile and Hot-Reload for Development
