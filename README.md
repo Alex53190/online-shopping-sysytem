@@ -26,8 +26,4 @@ npm run dev
 ```
 2.数据库为navicat下MYSQL8.0,如用户名密码不一致需要在后端配置文件中修改。
 
-### Compile and Minify for Production
 
-```sh
-npm run build
-```
