@@ -19,8 +19,8 @@ npm install
 ```
 
 ### Compile and Hot-Reload for Development
-
-```sh
+启动方式为点击app.vue右键打开终端，输入以下命令即可
+```sh 
 npm run dev
 ```
 
