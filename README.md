@@ -1,6 +1,6 @@
 demo3文件夹为后端部分，其余都是前端部分，其中后端需要idea启动，jdk最好为java23，需要maven仓库
 
-前端指南：
+1.前端指南：
 # shopping-system
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -24,7 +24,7 @@ npm install
 ```sh 
 npm run dev
 ```
-数据库为navicat下MYSQL8.0,如用户名密码不一致需要在后端配置文件中修改。
+2.数据库为navicat下MYSQL8.0,如用户名密码不一致需要在后端配置文件中修改。
 
 ### Compile and Minify for Production
 
