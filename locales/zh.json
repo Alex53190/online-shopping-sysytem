@@ -1,0 +1,25 @@
+{
+    "welcome_back": "欢迎回来",
+    "new_to_fashionest": "首次使用 FashioNest？立即注册",
+    "email_or_phone": "邮箱或手机号码",
+    "password": "密码",
+    "keep_signed_in": "保持登录状态",
+    "privacy_policy_agreement": "我已阅读并同意隐私政策。",
+    "sign_in": "登录",
+    "or": "或",
+    "continue_with_google": "使用 Google 继续",
+    "forgot_password": "忘记密码？",
+    "login_failed": "登录失败。请检查用户名或密码。",
+    "must_agree_privacy": "您必须同意隐私政策。",
+    "createAccount": "创建账户",
+    "phoneNumber": "手机号码",
+    "confirmPassword": "确认密码",
+    "keepUpdated": "保持更新",
+    "register": "注册",
+    "aboutUs": "关于我们",
+    "contactUs": "联系我们",
+    "privacyPolicy": "隐私政策",
+    "allRightsReserved": "版权所有",
+    "username":"用户名"
+
+  }

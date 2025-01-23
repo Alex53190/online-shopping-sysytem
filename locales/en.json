@@ -1,0 +1,23 @@
+{
+    "welcome_back": "Welcome back",
+    "new_to_fashionest": "New to FashioNest? Sign up now",
+    "email_or_phone": "Email or phone number",
+    "password": "Password",
+    "keep_signed_in": "Keep me signed in.",
+    "privacy_policy_agreement": "I have read and agree to the Privacy Policy.",
+    "sign_in": "Sign in",
+    "or": "or",
+    "continue_with_google": "Continue with Google",
+    "forgot_password": "Forgot password?",
+    "login_failed": "Login failed. Please check your username or password.",
+    "must_agree_privacy": "You must agree to the Privacy Policy.",
+    "createAccount": "Create Account",
+    "phoneNumber": "Phone Number",
+    "confirmPassword": "Confirm Password",
+    "keepUpdated": "Keep Updated",
+    "register": "Register",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "privacyPolicy": "Privacy Policy",
+    "allRightsReserved": "All rights reserved"
+  }
