@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop_system.mapper.CartMapper">
+
+    <!-- 查询用户购物车 -->
+    <select id="findCartByUser" parameterType="long" resultType="com.example.shop_system.entity.Cart">
+        SELECT * FROM cart WHERE user_id = #{userId}
+    </select>
+
+    <!-- 添加商品到购物车 -->
+    <insert id="addToCart" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO cart (user_id, product_id, quantity) VALUES (#{userId}, #{productId}, #{quantity})
+    </insert>
+
+    <!-- 更新购物车商品数量 -->
+    <update id="updateCartQuantity">
+        UPDATE cart SET quantity = #{quantity} WHERE id = #{id}
+    </update>
+
+    <!-- 从购物车中删除商品 -->
+    <delete id="deleteFromCart">
+        DELETE FROM cart WHERE id = #{id}
+    </delete>
+
+</mapper>

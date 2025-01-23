@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop_system.mapper.CategoryMapper">
+
+    <!-- 查询所有分类 -->
+    <select id="findAllCategories" resultType="com.example.shop_system.entity.Category">
+        SELECT * FROM category
+    </select>
+
+    <!-- 添加分类 -->
+    <insert id="addCategory" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO category (name, description) VALUES (#{name}, #{description})
+    </insert>
+
+    <!-- 删除分类 -->
+    <delete id="deleteCategory" parameterType="long">
+        DELETE FROM category WHERE id = #{id}
+    </delete>
+
+</mapper>

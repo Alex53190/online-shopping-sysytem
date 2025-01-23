@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop_system.mapper.FavoriteMapper">
+
+    <!-- 查询用户收藏列表 -->
+    <select id="findFavoritesByUser" parameterType="long" resultType="com.example.shop_system.entity.Favorite">
+        SELECT * FROM favorite WHERE user_id = #{userId}
+    </select>
+
+    <!-- 添加收藏 -->
+    <insert id="addFavorite" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO favorite (user_id, product_id, create_time) VALUES (#{userId}, #{productId}, NOW())
+    </insert>
+
+    <!-- 删除收藏 -->
+    <delete id="deleteFavorite">
+        DELETE FROM favorite WHERE user_id = #{userId} AND product_id = #{productId}
+    </delete>
+
+</mapper>

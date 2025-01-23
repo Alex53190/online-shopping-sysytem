@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop_system.mapper.ProductMapper">
+
+    <!-- 根据商家 ID 查询商品列表 -->
+    <select id="findProductsByMerchant" parameterType="long" resultType="com.example.shop_system.entity.Product">
+        SELECT * FROM product WHERE merchant_id = #{merchantId} ORDER BY create_time DESC
+    </select>
+
+    <!-- 根据商品 ID 查询商品详情 -->
+    <select id="findProductById" parameterType="long" resultType="com.example.shop_system.entity.Product">
+        SELECT * FROM product WHERE id = #{id}
+    </select>
+
+    <!-- 根据分类 ID 查询商品列表 -->
+    <select id="findProductsByCategory" parameterType="long" resultType="com.example.shop_system.entity.Product">
+        SELECT * FROM product WHERE category_id = #{categoryId} ORDER BY create_time DESC
+    </select>
+
+
+    <!-- 查询所有商品 -->
+    <select id="findAllProducts" resultType="com.example.shop_system.entity.Product">
+        SELECT * FROM product ORDER BY create_time DESC
+    </select>
+
+    <!-- 添加新商品 -->
+    <insert id="addProduct" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO product (id,merchant_id, category_id, name, price, stock, description, create_time)
+        VALUES (#{id},#{merchantId}, #{categoryId}, #{name}, #{price}, #{stock}, #{description}, NOW())
+    </insert>
+
+    <!-- 更新商品信息 -->
+    <update id="updateProduct">
+        UPDATE product
+        SET name = #{name},
+        price = #{price},
+        stock = #{stock},
+        category_id = #{categoryId},
+        description = #{description}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除商品 -->
+    <delete id="deleteProduct" parameterType="long">
+        DELETE FROM product WHERE id = #{id}
+    </delete>
+
+</mapper>

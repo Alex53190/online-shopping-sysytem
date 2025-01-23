@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop_system.mapper.AnnouncementMapper">
+
+    <!-- 查询所有公告 -->
+    <select id="findAllAnnouncements" resultType="com.example.shop_system.entity.Announcement">
+        SELECT * FROM announcement
+    </select>
+
+    <!-- 添加公告 -->
+    <insert id="addAnnouncement" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO announcement (content, create_time) VALUES (#{content}, NOW())
+    </insert>
+
+    <!-- 删除公告 -->
+    <delete id="deleteAnnouncement" parameterType="long">
+        DELETE FROM announcement WHERE id = #{id}
+    </delete>
+
+</mapper>

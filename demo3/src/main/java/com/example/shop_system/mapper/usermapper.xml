@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop_system.mapper.UserMapper">
+
+    <!-- 根据用户名查询用户 -->
+    <select id="findByUsername" resultType="com.example.shop_system.entity.User">
+        SELECT * FROM users WHERE username = #{username}
+    </select>
+
+    <!-- 根据用户ID查询用户 -->
+    <select id="findById" resultType="com.example.shop_system.entity.User">
+        SELECT * FROM users WHERE id = #{id}
+    </select>
+
+    <!-- 插入新用户 -->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO users (id,username, password, email, role)
+        VALUES (#{id},#{username}, #{password}, #{email}, #{role})
+    </insert>
+
+</mapper>
