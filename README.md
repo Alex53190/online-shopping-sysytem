@@ -1,4 +1,5 @@
 demo3文件夹为后端部分，其余都是前端部分，其中后端需要idea启动，jdk最好为java23，需要maven仓库
+数据库文件为shop_sysytem.sql,拖入数据库软件即可，但是需要先建数据库shop_system.
 
 1.前端指南：
 # shopping-system
@@ -24,6 +25,6 @@ npm install
 ```sh 
 npm run dev
 ```
-2.数据库为navicat下MYSQL8.0,如用户名密码不一致需要在后端配置文件中修改。
+2.数据库为navicat17下MYSQL8.0,如用户名密码不一致需要在后端配置文件中修改。
 
 
